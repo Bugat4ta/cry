@@ -1,0 +1,13 @@
+@echo off
+REM Set custom environment variables (optional)
+set POOL_URL=pool.example.com:3333 #replace with actual monero pool
+set WALLET_ADDRESS=YOUR_WALLET_ADDRESS # replace with actual wallet address
+
+REM Change directory to where xmrig.exe is located
+cd /d "C:\path\to\xmrig"
+
+REM Run xmrig with custom parameters
+xmrig.exe --url=%POOL_URL% --user=%WALLET_ADDRESS% --pass=x
+
+REM Pause to keep the window open for debugging (optional)
+pause
